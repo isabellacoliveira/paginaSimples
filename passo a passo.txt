@@ -1,0 +1,406 @@
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (master)
+$ git init 
+Reinitialized existing Git repository in C:/Users/ModalGR/Desktop/novoprojetinho/.git/
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (master)
+$ git status
+On branch master
+
+No commits yet  
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        projeto.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (master)
+$ git add .
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (master)
+$ git branch -M master main
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git branch inicioPagina
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git branch inicioPagina
+fatal: a branch named 'inicioPagina' already exists
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git checkout inicioPagina
+Switched to branch 'inicioPagina'
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git status 
+On branch inicioPagina
+nothing to commit, working tree clean
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git remote add origin https://github.com/isabellacoliveira/paginaSimples.git
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git remote
+$ git remote add local C:/Users/ModalGR/Desktop/novoprojetinho/.git/
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git remote
+local
+origin
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git checkout main
+Switched to branch 'main'
+$ git merge inicioPagina
+Updating cc8761e..0361374                                )
+Fast-forward
+ .gitignore   |  0
+ projeto.html | 80 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 80 insertions(+)                       ++++++++++++++++++++++
+ create mode 100644 .gitignore
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push -u origin main https://github.com/isabellacoliveira/paginaSimples.git
+fatal: invalid refspec 'https://github.com/isabellacoliveira/paginaSimples.git'
+
+fatal: refusing to merge unrelated histories
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main))                                                        veira/paginaSimples.git
+$ git push -u origin main https://github.com/isabellacoliira/paginaSimples.git'veira/paginaSimples.git
+fatal: invalid refspec 'https://github.com/isabellacolive)ira/paginaSimples.git'
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git log
+commit 036137462de70b1b752440351fa93f060612e299 (HEAD -> main, local/main, local/inicioPagina, inicioPagina)
+Author: Isabella Cruz de Oliveira <isaaholiveira15@gmail.com>
+Date:   Tue Oct 25 11:16:33 2022 -0300
+
+    fiz o código inicial
+
+commit 75c97bcfb6a9e4ec2c909c72f9d9f089fe33e0c8
+Author: Isabella Cruz de Oliveira <isaaholiveira15@gmail.com>
+Date:   Tue Oct 25 11:11:59 2022 -0300
+
+    adicionando gitignore
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git log --oneline
+0361374 (HEAD -> main, local/main, local/inicioPagina, inicioPagina) fiz o código inicial
+75c97bc adicionando gitignore
+cc8761e criei um novo projeto
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git reset
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git status 
+On branch main
+nothing to commit, working tree clean
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git status 
+On branch main
+nothing to commit, working tree clean
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git log --oneline 
+dd71018 (HEAD -> main) deletei um título desnecessário
+0361374 (local/main, local/inicioPagina, inicioPagina) fiz o código inicial
+75c97bc adicionando gitignore
+cc8761e criei um novo projeto
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git remote
+local
+origin
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push -u origin main
+To https://github.com/isabellacoliveira/paginaSimples.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git pull origin main
+From https://github.com/isabellacoliveira/paginaSimples
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push -u origin main
+To https://github.com/isabellacoliveira/paginaSimples.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git fetch
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git branch 
+  inicioPagina
+* main
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git merge main
+Already up to date.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push origin main
+To https://github.com/isabellacoliveira/paginaSimples.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push origin master 
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git pull origin main
+From https://github.com/isabellacoliveira/paginaSimples
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push origin main
+To https://github.com/isabellacoliveira/paginaSimples.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push -u origin main
+To https://github.com/isabellacoliveira/paginaSimples.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git checkout inicioPagina
+Switched to branch 'inicioPagina'
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git pull origin inicioPagina
+fatal: couldn't find remote ref inicioPagina
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git remote 
+local
+origin
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git push origin local https://github.com/isabellacoliveira/paginaSimples.git
+fatal: invalid refspec 'https://github.com/isabellacoliveira/paginaSimples.git'
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git remote uptade
+error: unknown subcommand: `uptade'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git remote update
+Fetching origin
+Fetching local
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git pull origin main
+From https://github.com/isabellacoliveira/paginaSimples
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git clone https://github.com/isabellacoliveira/paginaSimples.git
+Cloning into 'paginaSimples'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (inicioPagina)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 4 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git merge inicioPagina
+Already up to date.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git stats 
+git: 'stats' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git status 
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 4 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        paginaSimples/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git add .
+warning: adding embedded git repository: paginaSimples
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> paginaSimples
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached paginaSimples
+hint: 
+hint: See "git help submodule" for more information.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git status 
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 4 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   paginaSimples
+
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git pull origin main
+From https://github.com/isabellacoliveira/paginaSimples
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push -u origin main
+To https://github.com/isabellacoliveira/paginaSimples.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/isabellacoliveira/paginaSimples.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git remote -v
+local   C:/Users/ModalGR/Desktop/novoprojetinho/.git/ (fetch)
+local   C:/Users/ModalGR/Desktop/novoprojetinho/.git/ (push)
+origin  https://github.com/isabellacoliveira/paginaSimples.git (fetch)
+origin  https://github.com/isabellacoliveira/paginaSimples.git (push)
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git pull --rebase origin main
+From https://github.com/isabellacoliveira/paginaSimples
+ * branch            main       -> FETCH_HEAD
+warning: unable to rmdir 'paginaSimples': Directory not empty
+Successfully rebased and updated refs/heads/main.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 2.27 KiB | 580.00 KiB/s, done.
+Total 13 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/isabellacoliveira/paginaSimples.git
+   91e802f..3276e37  main -> main
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git branch alteracoes
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git checkout alteracoes
+Switched to branch 'alteracoes'
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (alteracoes)
+$ git checkout master 
+error: pathspec 'master' did not match any file(s) known to git
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (alteracoes)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git merge alteracoes
+Updating 3276e37..f3f18a9
+Fast-forward
+ projeto.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git push origin main
+Everything up-to-date
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git diff main..alteracoes
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git diff main...alteracoes
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$ git log --oneline
+f3f18a9 (HEAD -> main, origin/main, local/main, local/alteracoes, alteracoes) centralizei o titulo
+3276e37 trouxe o repositorio do github para a máquina
+8cfa117 deletei um título desnecessário
+871bd1e fiz o código inicial
+d9395d7 adicionando gitignore
+caf3a6d criei um novo projeto
+91e802f Initial commit
+
+ModalGR@mgr-000853 MINGW64 ~/Desktop/novoprojetinho (main)
+$
